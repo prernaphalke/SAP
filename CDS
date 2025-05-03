@@ -1,0 +1,15 @@
+CDS view 
+CDS view in abap stands for CORE DATA SERVICES are the next generation database views
+CDS Data model go beyond the capabilities of the DDIC Views. E.g you can define viwes that aggreagate an analyse data in a layered fashion. 
+It pushes data from Apllication layer to database layer.
+SAP S/4 HANA te next generation business suite, is also based on CDS in the form of VIRTUAL DATA MODEL VDM.
+Code pushdown 
+Delegating data intense calculations to the database layer. Eg Add balances of a customers saving account 
+ABAP developer traditionally used layered approach for development.
+with pushdown technology the business logic is pushed to the database layer.
+Eg Want to retrive Sales order which matches certain condition then write a function module/class/any other ABAP object which goes to the database layer 
+**************Precedure**********************
+The data from the database is selcted using CDS views, ABAP CDS provides a powerful CDS view model enabling advanced view building in ABAP.
+The Data from CDS view then exposed to UI using ODATA.
+Application Framework (BOPF) for transactional operatio such as Create read update and delete 
+SAP UI/5 is the latest ui technology from SAP Provides role based access.
