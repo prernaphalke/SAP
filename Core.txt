@@ -1,0 +1,194 @@
+Core:
+---------------
+it refers to several dimensions / pillars
+Processes
+Extensions
+Data
+Integrations
+Operations
+
+Clean it is a set of methodologies used for each dimensions.
+---------------------------------
+For clean core, the best case scenario describes an up-to-date system 
+on the latest release, with cloud-compliant extensions and integration, 
+excellent master data quality, and perfect process design.
+---------------------------------------------------
+Diving into more detail some of the identifying features of a clean core are:
+
+ ++ A streamlined and optimized version of SAP S/4HANA Cloud software that focuses 
+solely on essential functionalities and delivers maximum efficiency.
+++ The removal of unnecessary features, customizations, and complexities to simplify the ERP system's core codebase.
+++Enhanced maintainability, reduced technical debt, and improved overall system performance.
+
+------------------------------------------------------------
+Components of a Clean Core
+-------------------------
+Minimalism:   identifying and eliminating redundant or obsolete functionalities, ensuring only essential components remain.
+Modularity:  dividing a complex ERP system into modular components that are loosely coupled,  
+Scalability:  allows the ERP system to accommodate growth and change .
+Maintainability: By removing unnecessary complexities, it streamlines the codebase,  
+Stability and Reliability: A clean core fosters stability by reducing dependencies and making it less prone to bugs and 
+-----------------------------------------------
+
+Existing ERP Implementation Challenges
+As mentioned, some of the challenges ABC Manufacturing is experiencing are:
+
+	+++ Bloated System: The current ERP software that ABC Manufacturing uses is a heavily customized version, with numerous 	features and functions that are no longer useful or relevant.
+	+++ Performance Issues: The system experiences frequent slowdowns, impacting productivity, and causing dissatisfaction among 	users.
+	+++ High Maintenance Cost: The complex codebase requires a considerable amount of effort and resources for regular 	maintenance and support. 
+--------------------------------------------
+Clean Core to the Rescue
+To address the challenges faced by ABC Manufacturing, the IT department decides to evaluate and apply the clean core principles to their ERP system. They determine that by streamlining the software's core components, they can achieve the following long-term benefits:
+
+Minimalism and Efficiency: By removing redundant features and customizations from the ERP system, ABC Manufacturing can enhance its performance, improving user experience and productivity.
+Scalability and Adaptability: A clean core architecture allows the ERP system to accommodate future growth and changing business needs, minimizing the need for expensive reimplementation.
+Ease of Maintenance: The simplified codebase of a clean core enables quicker bug fixes, reduced downtimes, and effortless customization, thus reducing the overall cost of maintenance.
+----------------------------------------------------------
+Results After Getting the Core Clean
+
+Improved Performance: Through optimization and minimalism, the (now clean) ERP delivers enhanced system response times and user satisfaction.
+Simplified Development: Developers now both understand and work on a streamlined codebase, with improved productivity and reduced development time.
+Enhanced Stability and Reliability: The removal of unnecessary complexities has minimized the risk of bugs and errors, resulting in a more reliable and stable ERP system.
+Cost Reduction: With reduced maintenance efforts, the clean core has resulted in decreased downtime and lower overall maintenance costs.
+---------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+for a new implementation ("greenfield") or a system conversion ("brownfield") implementation strategy. 
+greenfield This approach ensures efficiency and reduces complexity. 
+retaining the existing system we will inherit historic complexities and possibly unwanted customizations. 
+---------------------------------------------------------------------------------------
+-----------------------------------------------------------------------
+
+
+Clean Core Benefits For End Users  
+Performance Benefits for Users ====  increased performance of applications
+Data Benefits for Users ==== clean and reliable data
+System Stability and Reliability Benefits for Users  = no inconsistencies, errors, or bugs
+Business Process Benefits for Users == clear but also flexible
+
+
+---------------------------------------------------------------------
+Benefits of Clean Core for IT
+Software Stack Benefits === always at the latest release
+Business Process Flexibility Benefits ===   production, procurement, and inventory management processes were clean core compliant from the beginning. 
+Cloud Native Development Benefits === (ABAP Cloud Development Model) along with an end-to-end extensibility model (SAP S/4HANA Cloud Extensibility Model). 
+
+
+------------------------------------------------------------------
+Benefits of Clean Core for the Company
+
+Streamlined Operations And Improved Productivity Benefits
+Enhanced Inventory Management And Increased Cost Savings Benefits
+Improved Decision-Making And Business Intelligence Benefits
+Enhanced Collaboration And Communication Benefits
+-------------------------------------------------------------
+--------------------------------------------------------
+Making business processes clean core compliant is essential for organizations looking to stay competitive in today's fast-paced business environment. Organizations can ensure that their processes are efficient, reliable, and compliant with clean core by:
+
+establishing a strong organizational structure.
+implementing a robust technical foundation.
+using a transformation methodology.
+creating a detailed business process analysis, aligned with a strong technological foundation.
+This not only leads to improved outcomes, but also sets the stage for continued success and growth.
+
+
+Key solution capabilities to help project teams:
+
+LeanIX.
+LeanIX solutions allow teams to visualize their IT application landscape, identify applications that may become obsolete, facilitate the design of a target state, and help plan new architectural road maps.
+
+SAP Solution Manager and SAP Cloud ALM.
+Both solutions help to accelerate time to value and reduce TCO. SAP Cloud ALM particularly is a cloud native offering from SAP to customers which they can use to both implement SAP Cloud solutions and to operate cloud and hybrid landscapes.
+
+SAP Signavio Process Manager
+SAP Signavio Process Manager is an intuitive and comprehensive modeling platform for business process management (BPM) that enables organizations to capture, improve and maintain their business processes, fast and at scale.
+
+SAP Signavio Process Governance
+SAP Signavio Process Governance turns business process models created by Process Manager into standardized process governance workflows and enables organizations to increase internal and external compliance.
+
+	Use tools such as SAP Cloud Application Lifecycle Management and SAP Signavio Process Governance to establish a strong organizational structure.
+Setting Up a Prioritized Business Process
+
+-----------------------------------------------------------------------------------------------
+How to Make Extensions Clean Core Compliant
+Keep the extensions clean"
+--------------------------------------------------
+minimizing the use of extensions.
+ensuring that extensions do not break upgrades.
+making extensions cloud-compliant.
+understanding customer requirements.
+
+Three Tier Extensibility Model
+We mentioned in a previous lesson that there are three variations of SAP S/4HANA that customers could potentially adopt:
+
+SAP S/4HANA Cloud Public Edition
+SAP S/4HANA Cloud Private Edition
+SAP S/4HANA (for customers who desire an on premise / hosted approach)
+
+there are three extension types divided into two categories:
+
+On-stack extensions, created within SAP S/4HANA Cloud. 
+These extensions can be key user extensions (type 1) 
+			or developer extensions (type 2).
+			Side-by-side extensions, created within SAP Business Technology Platform (type 3).
+			Generally, type 1 or type 2 extensions are created when close coupling to SAP S/4HANA Cloud is necessary. 
+Type 3 extensions are created when a looser coupling is acceptable.
+
+----------------------------------------------------------------
+How to Make Data Core Compliant
+--------------------------------------------------
+
+Data Quality
+In today's data-driven landscape, the principles of data quality have evolved to prioritize six key facets:
+
+Accuracy
+Completeness
+Consistency
+Timeliness
+Validity
+Uniqueness
+
+Achieving Data Quality
+Data Volume Efficiency (From Creation to Retirement)
+
+Goals for data:
+Complete
+Correct
+Used and relevant
+
+----------------------------------------------------------------------
+How to Make Landscapes Core Compliant
+------------------------------------------
+Base Integrations on Standard APIs
+
+Apply SAP Integration Suite 
+		 SAP Integration Suite is SAP's integration platform as a service (iPaaS) which provides a complete and comprehensive solution for implementing middleware 		(also referred to sometimes as mediated) based integration scenarios. 
+Use SAP Event Mesh for Event-Based Scenarios
+			A service offered as part of SAP Business Technology Platform is the SAP Event Mesh, which allows applications to communicate with one another via 			asynchronous events. 
+Avoid Legacy APIs And Their Legacy Extension Options 
+Use SAP Application Interface Framework  traditional method interface should not use
+SAP Integration Solution Advisory Methodology
+----------------------------------------------------------------------
+to achieve clean core compliance within your SAP S/4HANA operations, planning, regular reviews, and strategic use of IT services become paramount. By following these steps, your organization is well positioned to safeguard system integrity, improve efficiency, and deliver value-driven business results.
+----------------------------------------------------------------------------
+
+Key Principles for Clean Core Implementation
+Streamlining Business Processes.
+Rationalizing Data Structures. ==== Cleansing that data is part of any clean core 
+Simplifying In Both Greenfield And Brownfield Scenarios.==
+
+
+--------------------------------------------------------------------
+Some Best Practices for Clean Core Implementation ---
+
+Continuous Improvement and Innovation
+Change Management and User Adoption
+Overcoming Challenges and Ensuring Success
+Applying SAP's Tools and Technologies
+Adopting SAP's Activate Methodology
+Aligning with SAP's Reference Architecture
+
+---------------------------------------------------------------------
+
+

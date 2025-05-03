@@ -1,0 +1,377 @@
+Intermediate level
+
+Delivered scope
+required scope
+uncovered scope
+covered scope
+specific scope 
+differentiating scope
+SAP applications undoubtedly is an important factor for customers in adopting SAP solutions, there is another factor they valued. Flexibility: The ability to adjust the delivered scope in such a way to fit their unique needs. 
+
+"Goldilocks" approach, where the needs of the following three distinct groups are balanced:
+
+End users who want software with a consistent user experience (more on this in a later lesson) that is simple and easy-to-use.
+
+Business stakeholders (particularly and especially process owners) who want an application that is stable but can be tailored to the unique way that they desire a business process to be executed.
+
+The IT department who must install and maintain a system, where the needs of the two groups mentioned previously are met but one in which those costs are managed in an optimal way for the business.
+
+---------------------------------------------------
+Classic Extensibility Approaches
+classic approach is badi se80 eclipse ide
+
+The core describes the main aspects of SAP S/4HANA Cloud. These aspects can be thought of as dimensions or components and they are oriented around the following:​
+
+Processes: The series of actions or steps taken within SAP S/4HANA Cloud that cover the end-to-end (E2E) experience of delivering an outcome or accomplishing a result.​
+Data: The data contained within and used by SAP S/4HANA Cloud processes. Commonly categorized as configuration, master, and transactional.​
+Integration: Connecting of SAP S/4HANA Cloud to other solutions for the purpose of sending and receiving data to support process execution.​
+Operations: Necessary maintenance activities performed within SAP S/4HANA Cloud such as release management, background job management, authorization 			management, monitoring, and alerting.​
+Extensibility: Functionality added to SAP S/4HANA Cloud that extends it to address organizational needs that are not met by the standard processes.​
+
+Clean​
+
+Clean means that for each of the previously mentioned aspects, the necessary approach is taken for it to be up-to-date, cloud compliant, optimized, and perfected, depending on the aspect in question.​
+
+---------------------------------------------------------------------
+The customer extension is kept "strictly separate" from SAP's baseline
+
+adopts in implementing SAP S/4HANA Cloud:​
+
+Adopting a policy of zero modifications​
+Eliminating enhancements that are redundant to standard code and functionality and also eliminating copies of SAP objects​
+Using released APIs only ("upgrade-stable interfaces")​
+Leveraging the key user (in-app) extensibility of SAP S/4HANA Cloud to its full extent​
+Employing the capabilities and services offered by SAP Business Technology Platform to build larger extension applications​
+Using SAP Integration Suite
+
+Benefits of Clean Core
+Clean core benefits everyone.
+
+To summarize, the benefits for customers are as follows:​
+
+Ease of upgrade: Make upgrades non-events, from a custom code point of view.​
+Fast consumption of innovation: Always on top of innovation technologies.​
+E2E system security, continuity, and stability.​
+TCO: efficient use of infrastructure and licenses.​
+Permanent traceability in all areas of the core.​
+The benefits for partners are as follows:​
+
+Future-proof and cloud-ready solutions.
+Promoting fit-to-standard compliance with clean core modular innovation.​
+Reduction of complexity with simplified consumption of out-of-the-box SAP solutions.
+----------------------------------------------------------------------------------
+--------------------------------------------------------
+
+System Conversion (Brownfield Approach) is like renovating an old house. Instead of building a new house from scratch, you start with your existing house and make improvements.
+
+In this case, you take your current SAP ERP system and convert it to SAP S/4HANA Cloud Private Edition or on-premise. You use your existing system as a template, making it as similar as possible to the new system. Once the conversion is done, you can start making any necessary adjustments based on your project needs. The main goal is to ensure the core system is clean and efficient.
+
+----------------------------------------------------------------------------------------
+_-------------------------------------------------------------------------------------------------
+
+ 
+
+**New Implementation (Greenfield Approach)** is like building a brand-new house on an empty plot of land. You start fresh without using any parts of an old house.
+
+In this case, you create a new SAP S/4HANA system (Cloud Public Edition, Cloud Private Edition, or on-premise) from scratch. This new system doesn't carry over any old custom code or modifications from your previous SAP ERP system. Because of this, you don't need to worry about fixing or adapting old changes.
+
+The new system starts with a clean core, meaning it's free from any old clutter. While you might still need to add new extensions based on the SAP S/4HANA Cloud extensibility model, the overall migration project is simpler because there's no conversion work needed.
+
+Instead of launching the new system all at once (a "big bang" approach), you can roll it out in phases, such as by different company codes. The main goal is to keep the core system clean and efficient from the start.
+
+ 😊
+----------------------------------------------------------------------------------------
+_-------------------------------------------------------------------------------------------------
+
+ 
+
+**Landscape Transformation** is like merging several small gardens into one big, well-organized garden.
+
+For companies that have many different ERP systems (often because they've merged with or acquired other companies), **Selective Data Transition** helps them combine the setup and data from all these different systems into one single SAP S/4HANA system (either Cloud Private Edition or on-premise).
+
+This process makes it easier to manage everything in one place instead of dealing with multiple separate systems.
+ 😊
+
+--------------------------------------------------------------------------------------------------------
+_-------------------------------------------------------------------------------------------------
+Conversion Scenarios
+
+ two different scenarios:
+
+SAP ERP running on any database if it is running on any different databases then first w have to transfer the database to hana and then convert to S4E
+SAP ERP running on SAP HANA (v 1.0 or v 2.0) - if it is already on hana database check for the version if it is 1.0 then upgrade it to 2.0 then convert SAP ERP to SAP S4/HANA
+​
+
+----------------------------------------------------------------------------------------
+_-------------------------------------------------------------------------------------------------
+
+Once the technical conversion is done, SAP recommends that project implementation teams use four workstreams to proceed with the migration, in accordance with the clean core approach:	
+
+Evaluate:
+Evaluate custom code using the ABAP call monitor and the Custom Code Migration app.
+
+Adapt:
+Adapt custom code automatically using the Quick Fix functionality as part of ABAP development tools for Eclipse, or manually in those instances where automatic adaptation is not feasible.
+
+Review:
+Review legacy modifications to determine those that are obsolete, unused, irrelevant, or replaceable.
+
+-------------------------------------
+initially the enhancement is done for the features who are not available in traditional system but it SAP S/4 HANA this are covered and we no longer needed those extra extensions that's why we do not need it.
+
+to find such code
+
+Collection and Aggregation of Extension Usage Data involves using tools to track how custom ABAP code is used in your SAP system.
+
+There are two main tools for this:
+
+Usage and Procedure Logging (UPL)
+ABAP Call Monitor (SCMON)
+Both tools collect data on how ABAP code (like class methods and function modules) is executed. The ABAP Call Monitor is newer and also shows who called the ABAP code.
+
+Important Points:
+
+Don't use both tools at the same time to avoid slowing down the system.
+Choose one tool and use it in the production system to track actual usage by end users.
+Run the chosen tool for 6–18 months, including at least one year-end closing, to get a complete picture.
+After collecting the data, use transaction code SUSG to combine and manage it. This is crucial because data from SCMON is deleted after a short time.
+
+Optimize:
+Optimize all code that will be retained after the conversion using ABAP tools such as the SQL monitor, SQL Trace, and the Performance Monitor.
+
+
+----------------------------------------------------------
+Custom Code Evaluation
+Collection and aggregation of extension usage data
+Determination of extensions that can be removed via custom code analysis
+Preparation of backup and restoration procedure
+Verification of desired app functionality with extension removed
+Deletion of extension during system conversion
+ ______________________________________________________________________________________
+
+
+This workstream involves different ways customers have modified their SAP systems over the years.
+
+**Modifications** can be:
+1. **Direct**: Changes made directly to an SAP object, either following SAP's instructions (SAP Note) or to change how an object behaves.
+2. **Indirect**: Changes that include:
+   - **Clones**: Copies of SAP objects.
+   - **Implicit Enhancements**: Additions at the beginning or end of code.
+   - **Class-Method Overwrites**: Changing methods in classes.
+
+**Tools** like transaction codes **SPDD** and **SPAU** (or **SPAU_ENH**), and a clone finder tool, help identify these modifications.
+
+The goal is to have a **clean core** with no modifications. The project team should aim to remove these modifications. They usually find that modifications are:
+1. **Obsolete**: Identical to an SAP version.
+2. **Unused**: Not used according to usage statistics.
+3. **Irrelevant**: Not needed in SAP S/4HANA.
+4. **Replaceable**: Can be redesigned as in-app extensions.
+
+If a modification is essential for business and can't be redesigned, the customer should contact SAP for guidance.
+
+Does that make it clearer? 😊
+__________________________________________________________________________________________________________________________
+
+
+performance check
+ABAP test cockpit, as part of ABAP development tools for Eclipse, offers the ability to performance check ABAP code. The SQL monitor tool can also be used. It identifies expensive SQL statements and the corresponding ABAP objects. SQL trace is available and can be used to look at the performance of individual SQL statements.
+________________________________________________________________________
+
+
+Surveys indicate that the proportion of customers adopting a system conversion versus a new implementation is 50/50.
+Compatibility Packs
+Compatibility packs allow customers a path to adapt their existing business processes to new business processes contained as part of SAP S/4HANA
+
+Lift and Shift - not simply go for lift and shift approach it still requires undergo the same removal and adaptation process, as well as performance optimization. can lead to higher project migration costs than what is necessary.
+
+
+---------------------------------------------------------------------
+SAP Fiori and SAP Fiori elements apps are built using SAPUI5
+SAPUI5 uses HTML5 along with CSS3 and JavaScript. It also leverages two well-known and popular libraries: LESS and jQuery. SAPUI5 has almost 200 standard controls that a developer can use in building UIs.
+
+SAP Business Application Studio
+SAP Business Application Studio is a service available on SAP Business Technology Platform (BTP). SAP Business Application Studio is a modern, integrated development environment that can be used to build SAP Fiori apps.
+
+SAP Fiori elements allows you to scale SAP Fiori development by delivering a template- and metadata-based approach to app creation. This reduces the amount of front-end development required
+
+SAP Fiori elements apps are automatically enterprise-grade. 	
+
+
+Easier Test Process
+XML, JavaScript, and JSON code all benefit from automatic code insertion and completion. All three are syntax checked with integrated tools.
+
+
+ A data layer provides persistence. A service layer provides an implementation of create, read, update, and delete operations (CRUD). The visual layer is implemented based on the popular Model View Controller (MVC) pattern, 
+
+SAP Fiori applications are assigned to end users via the role concept maintained via transaction PFCG.
+
+ADAPATIBILITY :application renders itself based on the type of device that it is being used on.
+
+Simple : deconstructed into small modular applications, based on the principle of one – a single application
+coherent :  consistent interaction and visual experience across the entire enterprise.
+Delightful :  SAP Fiori allows them to simply do their work, their work experience is enriched.
+
+
+
+-------------------------------------------------------------------
+IN sap build we have three different tool for building SAP 
+
+SAP Build Apps = with no code, user can build app using drag and drop technology
+SAP Build Process Automation = SAP Build Process Automation is also a no-code solution to create automated workflow processes. Builders can use SAP Build 				Process Automation to automate business processes and tasks without writing code. This is accomplished with drag and drop 				and also AI capabilities. 
+SAP Build Work Zone == LCNC toolset is SAP Build Work Zone. Virtually all organizations offer one or more portals, which offer a standardized entry point to 			end users to execute all applications relevant to their role
+ LCNC toolset, it is SAP Build Work Zone. Builders can use this tool to create dynamic and engaging role-based entry point sites accessible from any device quickly and easily.
+
+---------------------------------------------------------------------------------------------------------
+CLOUD COMPUTING
+****************************************************************************************************************
+way than from the typical on-premise data center infrastructure that IT personnel have traditionally been used in the past. With on-premise infrastructure (often referred to as an on-premise data center), the customer is responsible for the installation and maintenance of physical elements, such as servers and networking equipment. With cloud computing, these infrastructure components are provided by an external cloud provider.
+
+ components are provided by the cloud provider:
+
+Network
+Servers (providing compute and memory capacity)
+Storage
+Operating systems and virtualization
+The initial setup of these components, as well as their ongoing operations, maintenance, and upgrades, is handled by the cloud provider.
+
+
+-
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+### Cloud Computing Principles
+
+1. **Elasticity**:
+   - Think of it like a rubber band that can stretch and shrink. Cloud resources can expand or contract based on your needs. For example, during payroll processing, you might need more resources, and the cloud can provide that flexibility.
+
+2. **Pricing**:
+   - Cloud services are like a utility bill. You pay based on how much you use. Different providers offer different pricing plans, like subscription-based or pay-as-you-go.
+
+3. **Availability**:
+   - This is about how often you can access cloud resources. For example, if you need resources for payroll twice a month, the cloud ensures they are available when needed. Many providers offer 24/7 availability, so you can access resources anytime.
+
+4. **Service Level Agreement (SLA)**:
+   - SLAs are like a guarantee from the provider. They promise a certain level of service, like 99.99% uptime. This means the system might be down for only a few minutes each month.
+
+### Is There a Difference?
+
+- **Cloud vs. Data Center**:
+  - Cloud computing is different from having your own data center. In the cloud, your applications should work regardless of the underlying infrastructure (servers, OS, etc.). This means you don't have to worry about compatibility issues if the cloud provider changes their setup or if you switch providers.
+
+- **Cloud Native**:
+  - To make the most of the cloud, applications need to be designed specifically for it. This involves rethinking how we develop and maintain software, leading to the concept of "cloud native" applications.
+
+In simple terms, cloud computing offers flexibility, cost-effectiveness, and reliability, but it requires a new approach to developing and managing applications.
+
+Sure! Let's simplify the concepts:
+
+### Cloud Native Approach
+
+1. **Infrastructure Independent**:
+   - Cloud native applications work the same no matter what infrastructure (servers, networks, etc.) the cloud provider uses. This means you don't have to worry about the specific hardware or software the provider uses.
+
+2. **Microservices**:
+   - Applications are broken down into smaller, independent pieces called microservices. Each piece handles a specific function and can be developed, deployed, and maintained separately. For example, a banking app might have separate microservices for user interface, data storage, and transaction processing.
+
+3. **Application Programming Interfaces (APIs)**:
+   - APIs are like messengers that allow different software components to communicate with each other. For example, a banking app uses APIs to check your account balance or transfer money. APIs follow certain rules and protocols to ensure smooth communication.
+
+### REST (Representational State Transfer)
+
+1. **Resource**:
+   - In REST, a resource is any piece of information, like a bank account. Each resource has a state (e.g., the current balance) that can change over time.
+
+2. **Client-Server**:
+   - The client (e.g., your banking app) and the server (where the API is hosted) are separate. They communicate over the internet.
+
+3. **Stateless**:
+   - Each request from the client to the server is independent. The server doesn't remember previous requests. For example, if you check your balance twice, each request is treated separately.
+
+4. **Cacheable**:
+   - Some data can be stored temporarily to speed up responses. For example, your account balance might be cached to provide quicker access.
+
+5. **Layered System**:
+   - There can be intermediary systems (like load balancers) between the client and server to improve performance and security.
+
+6. **Code on Demand** (Optional):
+   - Servers can send executable code (like JavaScript) to the client to enhance functionality.
+
+### CRUD Operations with REST
+
+- **Create**: Use HTTP POST to add new data.
+- **Read**: Use HTTP GET to retrieve data.
+- **Update**: Use HTTP PUT to modify existing data.
+- **Delete**: Use HTTP DELETE to remove data.
+
+In summary, cloud native applications are designed to be flexible and independent of the underlying infrastructure. They use microservices and APIs to ensure smooth communication and adaptability. REST APIs follow specific principles to manage resources efficiently and support modern application needs.
+
+Sure! Let's break it down into simpler terms:
+
+### From ABAP Classic to ABAP Cloud
+
+1. **Need for Flexibility**:
+   - Companies need applications that can quickly adapt to changing customer demands. SAP S/4HANA Cloud helps with this by allowing flexible and easy-to-update applications.
+
+2. **Evolution of ABAP**:
+   - ABAP, a programming language used by SAP, has evolved over time. Initially, it was used for reports, then for creating programs and extensions. Now, with cloud computing, ABAP has evolved again to support cloud-native development.
+
+3. **Cloud Native and REST APIs**:
+   - Cloud native means developing applications specifically for the cloud. REST APIs are a key part of this, allowing different parts of an application to communicate over the internet.
+
+### ABAP Cloud Development Model
+
+1. **Cloud Native ABAP**:
+   - ABAP has been optimized for cloud development. This means it can efficiently create and manage applications in the cloud.
+
+2. **Programming Models**:
+   - **Transactional (OLTP)**: Build business objects and expose them as services (e.g., Sales Order).
+   - **Analytical (OLAP)**: Create services and UIs for data analysis (e.g., integrating with SAP Analytics Cloud).
+   - **Integration**: Strong data and application integration for service-oriented environments.
+
+3. **Key Features**:
+   - **Reuse Services**: Use core business services like number ranges and application jobs.
+   - **Built-in Qualities**: Ensure scalability, upgrade stability, and extensibility.
+
+### Evolution to ABAP Cloud
+
+1. **Innovations**:
+   - Over the past decade, several innovations like ABAP development tools for Eclipse, Core Data Services, and the ABAP RESTful application programming model have been introduced. These innovations together form the ABAP Cloud.
+
+2. **Availability**:
+   - ABAP Cloud is available in SAP BTP, ABAP environment, and SAP S/4HANA Cloud Public Edition. It coexists with ABAP Classic in SAP S/4HANA Cloud Private Edition and SAP S/4HANA.
+
+### Differences Between Classic ABAP and ABAP for Cloud Development
+
+1. **Subset of Features**:
+   - Not all ABAP features are compatible with cloud-native needs. Only a subset is used in ABAP Cloud. For example, obsolete keywords and certain UI technologies are not used.
+
+2. **Language Version Assignment**:
+   - Developers must assign a language version to development objects to ensure they are ABAP Cloud compliant.
+
+### ABAP Development Tools for Eclipse
+
+1. **Development Environment**:
+   - ABAP Cloud development is done using ABAP development tools for Eclipse. These tools provide features like code completion, syntax checking, and debugging, making the transition to ABAP Cloud smooth for developers.
+
+In summary, ABAP has evolved to support cloud-native development, allowing companies to create flexible and adaptable applications. The ABAP Cloud development model includes optimized programming models, key features for reuse and scalability, and a modern development environment.
+
+-------------------------------
+ABAP platform continues to provide a large number of these services so that they can continue to be used by developers in cloud-native development.
+
+
+Email Service
+Number Ranges and Change Documents
+Printing Queue
+Application Jobs and Logs
+Translation
+Units of Measurement
+Time Zones
+Exchange Rates and Currency Conversion
+SAP BTP provides the following additional technical reuse services:
+
+SAP BTP Forms By Adobe
+SAP BTP Document Management Service
+SAP Workflow Management
+SAP BTP Rules
+
+
+
